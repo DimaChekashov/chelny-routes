@@ -1,3 +1,34 @@
 .header{
+  -webkit-box-shadow: 0px 5px 16px -2px rgba(0,0,0,0.22);
+  -moz-box-shadow: 0px 5px 16px -2px rgba(0,0,0,0.22);
+  box-shadow: 0px 5px 16px -2px rgba(0,0,0,0.22);
+}
+
+.tabs-nav{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+.tabs-nav .tab-item{
+  width: 50%;
+}
+
+.tabs-nav .tab-link{
+  text-align: center;
+  display: block;
+  font-weight: 700;
+  font-size: 0.875rem;
+  padding: 1.1rem 0;
+  cursor: pointer;
+  transition: background-color 0.3s ease 0.02s, opacity 0.3s ease 0.02s;
+  -webkit-transition: background-color 0.3s ease 0.02s, opacity 0.3s ease 0.02s;
+}
+.tabs-nav .tab-link:hover{
   background-color: #64dd17;
+  opacity: 0.8;
+}
+.tabs-nav .tab-link.active{
+  background-color: #64dd17;
+  cursor: default;
 }

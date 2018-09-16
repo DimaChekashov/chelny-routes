@@ -1,0 +1,24 @@
+.footer{
+  display: flex;
+  justify-content: space-between;
+  min-height: 44px;
+}
+
+.nav-btn{
+  width: 33.33%;
+  border: 0;
+  padding: 0.5rem 0;
+  background: transparent;
+  cursor: pointer;
+  transition: background-color 0.2s ease 0.02s;
+  -webkit-transition: background-color 0.2s ease 0.02s;
+}
+.nav-btn:hover{
+  background-color: #eeeeee;
+}
+.nav-btn:focus{
+  outline: none;
+}
+.nav-btn img{
+  width: 25px;
+}
