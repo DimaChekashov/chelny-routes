@@ -14,15 +14,15 @@ class Header extends Component {
   }
 
   handleSelect(key){
-    alert(`selected ${key}`);
+
   }
 
   render(){
     return(
-      <header className="header" onClick={this.handleSelect}>
+      <header className="header">
         <ul className="tabs-nav">
-          <li className="tab-item"><a className="tab-link active">В It-park</a></li>
-          <li className="tab-item"><a className="tab-link">Из It-park</a></li>
+          <li className="tab-item"><a onClick={ () => this.setState({ key: 1}) } className={this.state.key == 1 ? 'tab-link active' : 'tab-link'}>В It-park</a></li>
+          <li className="tab-item"><a onClick={ () => this.setState({ key: 2}) } className={this.state.key == 2 ? 'tab-link active' : 'tab-link'}>Из It-park</a></li>
         </ul>
       </header>
     );
