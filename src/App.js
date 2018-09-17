@@ -2,23 +2,33 @@ import React, { Component } from 'react';
 import './App.css';
 
 import Header from './components/Header';
-import Window from './components/Window';
+import WindowBlock from './components/WindowBlock';
 import Footer from './components/Footer';
 
 class App extends Component {
   constructor(props){
     super(props);
-    this.state = {
 
+    this.handleClickBtnFooter = this.handleClickBtnFooter.bind(this);
+
+    this.state = {
+      activeNavHeader: 1,
+      acitveNavFooter: 2
     };
+  }
+  handleClickBtnFooter(btnActive){
+    this.setState({ acitveNavFooter: btnActive });
   }
 
   render() {
     return (
       <div className="App">
         <Header />
-        <Window />
-        <Footer />
+        <WindowBlock activeBlock={this.state.acitveNavFooter} />
+        <Footer 
+          onClickBtn={this.handleClickBtnFooter} 
+          activeBtn={this.state.acitveNavFooter} 
+        />
       </div>
     );
   }

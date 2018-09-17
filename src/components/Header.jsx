@@ -21,8 +21,8 @@ class Header extends Component {
     return(
       <header className="header">
         <ul className="tabs-nav">
-          <li className="tab-item"><a onClick={ () => this.setState({ key: 1}) } className={this.state.key == 1 ? 'tab-link active' : 'tab-link'}>В It-park</a></li>
-          <li className="tab-item"><a onClick={ () => this.setState({ key: 2}) } className={this.state.key == 2 ? 'tab-link active' : 'tab-link'}>Из It-park</a></li>
+          <li className="tab-item"><a onClick={ () => this.setState({ key: 1}) } className={this.state.key === 1 ? 'tab-link active' : 'tab-link'}>В It-park</a></li>
+          <li className="tab-item"><a onClick={ () => this.setState({ key: 2}) } className={this.state.key === 2 ? 'tab-link active' : 'tab-link'}>Из It-park</a></li>
         </ul>
       </header>
     );
