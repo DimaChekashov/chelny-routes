@@ -19,7 +19,7 @@ class Header extends Component {
 
   render(){
     return(
-      <header className="header">
+      <header className="header" onClick={this.handleSelect}>
         <ul className="tabs-nav">
           <li className="tab-item"><a className="tab-link active">В It-park</a></li>
           <li className="tab-item"><a className="tab-link">Из It-park</a></li>

@@ -4,7 +4,7 @@ import './Route.css';
 class Route extends Component {
   render() {
     return(
-      <div></div>
+      <div className="route-block"></div>
     );
   };
 }

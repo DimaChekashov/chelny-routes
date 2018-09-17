@@ -7,7 +7,7 @@ import Route from './Route';
 class Window extends Component {
   render(){
     return(
-      <TimeList />
+      <Maps />
     );
   };
 }

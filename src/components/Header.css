@@ -21,14 +21,16 @@
   font-size: 0.875rem;
   padding: 1.1rem 0;
   cursor: pointer;
-  transition: background-color 0.3s ease 0.02s, opacity 0.3s ease 0.02s;
-  -webkit-transition: background-color 0.3s ease 0.02s, opacity 0.3s ease 0.02s;
+  transition: background-color 0.3s ease 0.02s, opacity 0.3s ease 0.02s, color 0.3s ease 0.02s;
+  -webkit-transition: background-color 0.3s ease 0.02s, opacity 0.3s ease 0.02s, color 0.3s ease 0.02s;
 }
 .tabs-nav .tab-link:hover{
   background-color: #64dd17;
   opacity: 0.8;
+  color: #ffffff;
 }
 .tabs-nav .tab-link.active{
   background-color: #64dd17;
   cursor: default;
+  color: #ffffff;
 }
