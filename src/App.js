@@ -9,6 +9,7 @@ class App extends Component {
   constructor(props){
     super(props);
 
+    this.handleClickBtnHeader = this.handleClickBtnHeader.bind(this);
     this.handleClickBtnFooter = this.handleClickBtnFooter.bind(this);
 
     this.state = {
@@ -16,6 +17,11 @@ class App extends Component {
       acitveNavFooter: 2
     };
   }
+  
+  handleClickBtnHeader(btnActive){
+    this.setState({ activeNavHeader: btnActive }); 
+  }
+
   handleClickBtnFooter(btnActive){
     this.setState({ acitveNavFooter: btnActive });
   }
@@ -23,8 +29,14 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Header />
-        <WindowBlock activeBlock={this.state.acitveNavFooter} />
+        <Header 
+          onActiveNav={this.handleClickBtnHeader} 
+          activeLink={this.state.activeNavHeader}
+        />
+        <WindowBlock 
+          activeBlock={this.state.acitveNavFooter} 
+          activeNavLink={this.state.activeNavHeader}
+        />
         <Footer 
           onClickBtn={this.handleClickBtnFooter} 
           activeBtn={this.state.acitveNavFooter} 

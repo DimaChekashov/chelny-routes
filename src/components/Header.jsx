@@ -9,20 +9,20 @@ class Header extends Component {
     this.handleSelect = this.handleSelect.bind(this);
 
     this.state = {
-      key: 1
+
     };
   }
 
   handleSelect(key){
-
+    this.props.onActiveNav(key);
   }
 
   render(){
     return(
       <header className="header">
         <ul className="tabs-nav">
-          <li className="tab-item"><a onClick={ () => this.setState({ key: 1}) } className={this.state.key === 1 ? 'tab-link active' : 'tab-link'}>В It-park</a></li>
-          <li className="tab-item"><a onClick={ () => this.setState({ key: 2}) } className={this.state.key === 2 ? 'tab-link active' : 'tab-link'}>Из It-park</a></li>
+          <li className="tab-item"><a onClick={ () => this.handleSelect(1) } className={this.props.activeLink === 1 ? 'tab-link active' : 'tab-link'}>В It-park</a></li>
+          <li className="tab-item"><a onClick={ () => this.handleSelect(2) } className={this.props.activeLink === 2 ? 'tab-link active' : 'tab-link'}>Из It-park</a></li>
         </ul>
       </header>
     );
@@ -30,7 +30,8 @@ class Header extends Component {
 }
 
 Header.propTypes = {
-  eventKey: PropTypes.number
+  onActiveNav: PropTypes.func,
+  activeLink: PropTypes.number
 }
 
 export default Header;

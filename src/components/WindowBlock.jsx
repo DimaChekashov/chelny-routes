@@ -8,11 +8,11 @@ import Route from './Route';
 
 class WindowBlock extends Component {
   render(){
-    let activeBlock = (this.props.activeBlock === 1) ? <TimeList /> 
+    let activeBlock = (this.props.activeBlock === 1) ? <TimeList activeNav={this.props.activeNavLink} /> 
                       : 
-                      (this.props.activeBlock === 2) ? <Maps /> 
+                      (this.props.activeBlock === 2) ? <Maps activeNav={this.props.activeNavLink}  /> 
                       : 
-                      (this.props.activeBlock === 3) ? <Route /> 
+                      (this.props.activeBlock === 3) ? <Route activeNav={this.props.activeNavLink}  /> 
                       : 
                       '';
     return(
@@ -22,7 +22,8 @@ class WindowBlock extends Component {
 }
 
 WindowBlock.propTypes = {
-  activeBlock: PropTypes.number
+  activeBlock: PropTypes.number,
+  activeNavLink: PropTypes.number
 }
 
 export default WindowBlock;
