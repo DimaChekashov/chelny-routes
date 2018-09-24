@@ -2,3 +2,16 @@
   overflow: auto;
   height: 100%;
 }
+.window::-webkit-scrollbar {
+  width: 10px;
+}
+.window::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+.window::-webkit-scrollbar-thumb {
+  background: #64dd17;
+  border-radius: 3px;
+}
+.window::-webkit-scrollbar-thumb:hover {
+  background: #64dd17; 
+}

@@ -28,7 +28,8 @@ class TimeList extends Component {
 }
 
 TimeList.propTypes = {
-  activeNav: PropTypes.number
+  activeNav: PropTypes.number,
+  time: PropTypes.array
 }
 
 export default TimeList;
