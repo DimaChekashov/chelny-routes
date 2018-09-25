@@ -24,7 +24,7 @@ class WindowBlock extends Component {
 WindowBlock.propTypes = {
   activeBlock: PropTypes.number,
   activeNavLink: PropTypes.number,
-  timeNow: PropTypes.array
+  timeNow: PropTypes.func
 }
 
 export default WindowBlock;
