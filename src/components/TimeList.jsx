@@ -13,13 +13,12 @@ class TimeList extends Component {
     }
   }
 
-  render(){
+  render() {
+    let times = this.props.activeNav === 1 ? this.state.times[0].time : this.state.times[1].time;
+    
     return (
       <ul className="time-list">
-        (this.props.activeNav === 1) ?
-          {this.state.times[0].time.map(time => <li key={time} className="time-item">{time}</li>)}
-        :
-          {this.state.times[1].time.map(time => <li key={time} className="time-item">{time}</li>)}
+        {times.map(time => <li key={time} className="time-item">{time}</li>)}
       </ul>
     );
   };
