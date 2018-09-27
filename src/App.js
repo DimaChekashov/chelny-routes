@@ -4,6 +4,7 @@ import './App.css';
 import Header from './components/Header';
 import WindowBlock from './components/WindowBlock';
 import Footer from './components/Footer';
+import Loader from './components/Loader';
 
 class App extends Component {
   constructor(props){
@@ -12,11 +13,13 @@ class App extends Component {
     this.handleClickBtnHeader = this.handleClickBtnHeader.bind(this);
     this.handleClickBtnFooter = this.handleClickBtnFooter.bind(this);
     this.handleTime = this.handleTime.bind(this);
+    this.handleLoad = this.handleLoad.bind(this);
 
     this.state = {
       activeNavHeader: 1,
       acitveNavFooter: 2,
-      time: [null, null]
+      time: [null, null],
+      loaded: false
     };
   }
 
@@ -36,9 +39,14 @@ class App extends Component {
     this.setState({ acitveNavFooter: btnActive });
   }
 
+  handleLoad(){
+    this.setState({ loaded: true });
+  }
+
   render() {
     return (
-      <div className="App">
+      <div className="App" onLoad={ this.handleLoad }>
+        <Loader loaded={this.state.loaded} />
         <Header 
           onActiveNav={this.handleClickBtnHeader} 
           activeLink={this.state.activeNavHeader}
