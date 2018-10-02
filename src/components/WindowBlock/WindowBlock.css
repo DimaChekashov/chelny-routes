@@ -3,14 +3,14 @@
   height: 100%;
 }
 .window::-webkit-scrollbar {
-  width: 10px;
+  width: 5px;
 }
 .window::-webkit-scrollbar-track {
   background: #f1f1f1; 
 }
 .window::-webkit-scrollbar-thumb {
   background: #64dd17;
-  border-radius: 3px;
+  border-radius: 0px;
 }
 .window::-webkit-scrollbar-thumb:hover {
   background: #64dd17; 

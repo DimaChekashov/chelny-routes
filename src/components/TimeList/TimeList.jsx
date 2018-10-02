@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import './TimeList.css';
 
-import times from '../times';
+import times from '../../times';
 
 class TimeList extends Component {
   constructor(props){

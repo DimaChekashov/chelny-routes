@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import './WindowBlock.css';
 
-import TimeList from './TimeList';
-import Maps from './Maps';
-import Route from './Route';
+import TimeList from './../TimeList/TimeList';
+import Maps from './../Maps/Maps';
+import Route from './../Route/Route';
 
 class WindowBlock extends Component {
   render(){

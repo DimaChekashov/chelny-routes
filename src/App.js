@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import './App.css';
 
-import Header from './components/Header';
-import WindowBlock from './components/WindowBlock';
-import Footer from './components/Footer';
-import Loader from './components/Loader';
+import Header from './components/Header/Header';
+import WindowBlock from './components/WindowBlock/WindowBlock';
+import Footer from './components/Footer/Footer';
+import Loader from './components/Loader/Loader';
 
 class App extends Component {
   constructor(props){

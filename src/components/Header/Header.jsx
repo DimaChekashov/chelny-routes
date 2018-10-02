@@ -21,8 +21,18 @@ class Header extends Component {
     return(
       <header className="header">
         <ul className="tabs-nav">
-          <li className="tab-item"><a onClick={ () => this.handleSelect(1) } className={`tab-link${this.props.activeLink === 1 ? ' active' : ''}`}>В It-park</a></li>
-          <li className="tab-item"><a onClick={ () => this.handleSelect(2) } className={`tab-link${this.props.activeLink === 2 ? ' active' : ''}`}>Из It-park</a></li>
+          <li className="tab-item">
+            <a 
+              onClick={ () => this.handleSelect(1) } 
+              className={`tab-link${this.props.activeLink === 1 ? ' active' : ''}`}
+            >В It-park</a>
+          </li>
+          <li className="tab-item">
+            <a 
+              onClick={ () => this.handleSelect(2) } 
+              className={`tab-link${this.props.activeLink === 2 ? ' active' : ''}`}
+            >Из It-park</a>
+          </li>
         </ul>
       </header>
     );
