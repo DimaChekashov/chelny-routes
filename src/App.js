@@ -12,7 +12,6 @@ class App extends Component {
 
     this.handleClickBtnHeader = this.handleClickBtnHeader.bind(this);
     this.handleClickBtnFooter = this.handleClickBtnFooter.bind(this);
-    this.handleLoad = this.handleLoad.bind(this);
 
     this.state = {
       activeNavHeader: 1,
@@ -21,21 +20,21 @@ class App extends Component {
     };
   }
   
-  handleClickBtnHeader(btnActive){
+  componentDidMount() {
+    this.setState({ loaded: true });
+  }
+  
+  handleClickBtnHeader(btnActive) {
     this.setState({ activeNavHeader: btnActive }); 
   }
 
-  handleClickBtnFooter(btnActive){
+  handleClickBtnFooter(btnActive) {
     this.setState({ acitveNavFooter: btnActive });
-  }
-
-  handleLoad(){
-    this.setState({ loaded: true });
   }
 
   render() {
     return (
-      <div className="App" onLoad={ this.handleLoad }>
+      <div className="App">
         <Loader loaded={this.state.loaded} />
         <Header 
           onActiveNav={this.handleClickBtnHeader} 

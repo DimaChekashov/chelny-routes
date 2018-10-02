@@ -9,6 +9,7 @@ class Time extends Component {
 
     this.state = {
       time:  0,
+      late: false
     };
 
     this.tick = this.tick.bind(this);
@@ -24,15 +25,26 @@ class Time extends Component {
 
   tick() {
     const now = new Date();
+    const busTime = this.props.busTime.split(':');
+    let min = parseInt(busTime[1]) - now.getMinutes(),
+        hours = parseInt(busTime[0]) - now.getHours();
+
+    if (hours < 0) {
+      min = 0;
+      hours = 0;
+      this.setState({
+        late: true
+      });
+    }
 
     this.setState({
-      time: now.getHours() + ':' + now.getMinutes() + ':' + now.getSeconds()
+      time: hours + ':' + min
    });
   }
 
   render() {
     return (
-      <span className="time-left">{this.props.busTime} {this.state.time}</span>
+      <span className={`time-left${this.state.late === true ? ' time-down' : ''}`}>{this.state.late === false ? `Автобус приедет через: ${this.state.time}` : 'Автобус больше не приедет по этому времени найдите другой способ передвижения'}</span>
     );
   }
 }

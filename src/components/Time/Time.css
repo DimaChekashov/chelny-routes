@@ -1,5 +1,5 @@
 .time-left{
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 .time-good{
@@ -9,5 +9,5 @@
   color: #dc3545
 }
 .time-down{
-  display: none;
+  color: #2b2b2b;
 }
