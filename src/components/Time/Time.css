@@ -1,0 +1,13 @@
+.time-left{
+  font-size: 1.2rem;
+}
+
+.time-good{
+  color: #1faa00;
+}
+.time-danger{
+  color: #dc3545
+}
+.time-down{
+  display: none;
+}

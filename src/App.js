@@ -12,23 +12,13 @@ class App extends Component {
 
     this.handleClickBtnHeader = this.handleClickBtnHeader.bind(this);
     this.handleClickBtnFooter = this.handleClickBtnFooter.bind(this);
-    this.handleTime = this.handleTime.bind(this);
     this.handleLoad = this.handleLoad.bind(this);
 
     this.state = {
       activeNavHeader: 1,
-      acitveNavFooter: 2,
-      time: [null, null],
+      acitveNavFooter: 1,
       loaded: false
     };
-  }
-
-  handleTime(item){
-    let time = new Date(),
-        hours = time.getHours(),
-        minutes = time.getMinutes();
-
-    this.setState({ time: [hours, minutes]});
   }
   
   handleClickBtnHeader(btnActive){
@@ -54,7 +44,6 @@ class App extends Component {
         <WindowBlock 
           activeBlock={this.state.acitveNavFooter} 
           activeNavLink={this.state.activeNavHeader}
-          timeNow={this.handleTime}
         />
         <Footer 
           onClickBtn={this.handleClickBtnFooter} 

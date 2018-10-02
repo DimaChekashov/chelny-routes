@@ -8,7 +8,7 @@ import Route from './../Route/Route';
 
 class WindowBlock extends Component {
   render(){
-    let activeBlock = (this.props.activeBlock === 1) ? <TimeList activeNav={this.props.activeNavLink} time={this.props.timeNow} /> 
+    let activeBlock = (this.props.activeBlock === 1) ? <TimeList activeNav={this.props.activeNavLink} /> 
                       : 
                       (this.props.activeBlock === 2) ? <Maps activeNav={this.props.activeNavLink}  /> 
                       : 
@@ -23,8 +23,7 @@ class WindowBlock extends Component {
 
 WindowBlock.propTypes = {
   activeBlock: PropTypes.number,
-  activeNavLink: PropTypes.number,
-  timeNow: PropTypes.func
+  activeNavLink: PropTypes.number
 }
 
 export default WindowBlock;

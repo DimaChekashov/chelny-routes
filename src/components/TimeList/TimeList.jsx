@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import './TimeList.css';
 
+import './TimeList.css';
 import times from '../../times';
+
+import Time from './../Time/Time';
 
 class TimeList extends Component {
   constructor(props){
@@ -18,7 +20,9 @@ class TimeList extends Component {
     
     return (
       <ul className="time-list">
-        {times.map(time => <li key={time} className="time-item">{time}</li>)}
+        {times.map((time) => 
+          <li key={time} className="time-item">{time} <Time busTime={time} /></li>
+        )}
       </ul>
     );
   };
