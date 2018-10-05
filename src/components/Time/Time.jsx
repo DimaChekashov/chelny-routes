@@ -36,6 +36,10 @@ class Time extends Component {
         late: true
       });
     }
+    if (hours > 0 && min < 0) {
+      hours--;
+      min = 60 + min;
+    }
 
     this.setState({
       time: hours + ':' + min

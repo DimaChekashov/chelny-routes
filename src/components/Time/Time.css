@@ -1,5 +1,8 @@
 .time-left{
   font-size: 1rem;
+  line-height: 1.5;
+  margin-left: 5px;
+  width: 58%;
 }
 
 .time-good{

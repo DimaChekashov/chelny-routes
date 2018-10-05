@@ -9,9 +9,9 @@ import Route from './../Route/Route';
 class WindowBlock extends Component {
   render(){
     let activeBlock = (this.props.activeBlock === 1) ? <TimeList activeNav={this.props.activeNavLink} /> 
-                      : 
+                      :
                       (this.props.activeBlock === 2) ? <Maps activeNav={this.props.activeNavLink}  /> 
-                      : 
+                      :
                       (this.props.activeBlock === 3) ? <Route activeNav={this.props.activeNavLink}  /> 
                       : 
                       '';
