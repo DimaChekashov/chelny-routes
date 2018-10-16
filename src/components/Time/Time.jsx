@@ -29,7 +29,7 @@ class Time extends Component {
     let min = parseInt(busTime[1]) - now.getMinutes(),
         hours = parseInt(busTime[0]) - now.getHours();
 
-    if (hours < 0) {
+    if (hours <= 0) {
       min = 0;
       hours = 0;
       this.setState({
