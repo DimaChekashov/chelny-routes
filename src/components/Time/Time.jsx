@@ -40,6 +40,9 @@ class Time extends Component {
       hours--;
       min = 60 + min;
     }
+    if (min < 10 && min >= 0) {
+      min = '0' + min;
+    }
 
     this.setState({
       time: hours + ':' + min
@@ -48,7 +51,13 @@ class Time extends Component {
 
   render() {
     return (
-      <span className={`time-left${this.state.late === true ? ' time-down' : ''}`}>{this.state.late === false ? `Автобус приедет через: ${this.state.time}` : 'Автобус больше не приедет по этому времени найдите другой способ передвижения'}</span>
+      <span className={`time-left${this.state.late === true ? ' time-down' : ''}`}>
+        {this.state.late === false ? 
+          `Автобус приедет через: ${this.state.time}` 
+          : 
+          'Автобус больше не приедет по этому времени найдите другой способ передвижения'
+        }
+      </span>
     );
   }
 }

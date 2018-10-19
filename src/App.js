@@ -21,7 +21,12 @@ class App extends Component {
   }
   
   componentDidMount() {
-    this.setState({ loaded: true });
+    setTimeout(() => {
+      this.setState({ loaded: true });
+    }, 1000);
+  }
+  componentWillUnmount() {
+    this.setState({ loaded: false });
   }
   
   handleClickBtnHeader(btnActive) {
